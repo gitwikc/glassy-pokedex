@@ -1,0 +1,88 @@
+@import "vars/colors";
+@import "vars/fonts";
+@import "vars/ui";
+
+@import "routes/Home";
+@import "routes/Pokemon";
+
+@import "components/PokemonCard";
+@import "components/SearchBar";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $text;
+  font-family: $sans-serif;
+
+  #root {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to bottom, #0000004a, #00000000),
+      url("../icon/bg.jpg");
+    background-position: center;
+
+    .App {
+      @extend .glass;
+      width: 70%;
+      height: 90%;
+      backdrop-filter: blur(1.5px);
+
+      padding-bottom: 2rem;
+
+      border-radius: 2rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      overflow: hidden;
+
+      @media screen and (max-width: 640px) {
+        width: 98%;
+        border-radius: 1rem;
+      }
+
+      header {
+        @extend .glass_invert;
+        flex: 1;
+        max-height: 5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        box-shadow: 0px 2px 15px hsla(0, 0%, 40%, 0.2);
+
+        .text {
+          font-family: $serif;
+          font-weight: 900;
+          font-size: 2.1rem;
+          color: $title-text;
+        }
+      }
+
+      main {
+        flex: auto;
+        padding: 0 2rem;
+        padding-bottom: 1rem;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+          @extend .glass;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: linear-gradient(to bottom, #5b30d3, #491fdf);
+        }
+      }
+    }
+  }
+}

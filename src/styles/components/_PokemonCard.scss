@@ -1,0 +1,53 @@
+.PokemonCard {
+  @extend .glass_invert;
+  border-radius: 0.6rem;
+  box-shadow: 2px 2px 14px #32323222;
+
+  .poke_img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .poke_data {
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .name {
+      color: $title-text;
+      font-family: $serif;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+    }
+
+    .types {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .type_badge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1.5rem;
+      width: max-content;
+      padding: 0 0.6rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-shadow: 0 0 4px #424242cd;
+      border-radius: 0.75rem;
+      color: #ffffff;
+      opacity: 0.85;
+    }
+  }
+
+  .weight {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      font-size: 1.7rem;
+    }
+  }
+}

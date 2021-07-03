@@ -1,0 +1,13 @@
+.bg_gradient {
+  background: hsl(340, 100%, 71%);
+  background: linear-gradient(
+    315deg,
+    hsl(340, 100%, 71%) 0%,
+    hsl(342, 100%, 57%) 90%
+  );
+}
+
+$text: hsla(330, 9%, 21%, 0.8);
+$title-text: hsla(244, 59%, 54%, 0.8);
+$color-1: hsl(342, 100%, 57%) 90%;
+$color-2: hsl(340, 100%, 71%);
